@@ -1,0 +1,24 @@
+title: Lung Cancer Detection
+description: Classify CT scan images based on tumor
+about:
+
+
+  This is a Lung Cancer Detector that detects if CT scan is of normal, malignant or benign tumor patient using Deep Learning and was built with [fastai](docs.fast.ai)
+
+
+  This project was built by Amol and Pranav
+
+
+
+  The web application was based on computer vision techniques.
+
+
+code: https://github.com/pranavteli/lungcancerdetection4
+
+sampleImages:
+  - name: Test 1
+    url: https://i.postimg.cc/x1BpqJMx/Bengin-case-1.jpg
+  - name: Test 2
+    url: https://i.postimg.cc/mg18xLJQ/Malignant-case-1.jpg
+  - name: Test 3
+    url: https://i.postimg.cc/BQXCDZqd/Normal-case-1.jpg
