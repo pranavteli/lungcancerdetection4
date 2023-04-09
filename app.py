@@ -11,7 +11,11 @@ from flask import Flask
 import requests
 import torch
 import json
+import gdown
 
+url = 'https://drive.google.com/uc?id=13GY_2v2mMfmhJC08CuX4fbPuMdRgMYIA'
+output = 'models/export.pkl'
+gdown.download(url, output, quiet=False)
 print(os.getcwd())
 print(os.listdir())
 
@@ -38,9 +42,9 @@ def load_image_bytes(raw_bytes: ByteString) -> Image:
 
 
 def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
-    with open('models/DR_classes.txt') as f:
-        classes = f.read().split(',')
-    print(classes)
+#     with open('models/DR_classes.txt') as f:
+#         classes = f.read().split(',')
+#     print(classes)
     pred_class, pred_idx, outputs = model.predict(img)
     pred_probs = outputs / sum(outputs)
     pred_probs = pred_probs.tolist()
